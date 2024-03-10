@@ -57,7 +57,11 @@ const Stats: NextPage = () => {
   return (
     <div className='get-number'>
       <h1>What is the situation in Malaysia?</h1>
-      <h4>Malaysia: Active COVID-19 Cases</h4>
+      <div className='small-title'>
+         <h4>Malaysia: Active COVID-19 Cases</h4>
+         <div className='info-data-date'>Date as of: {latestDate}</div>
+      </div>
+     
       <div className='info-data'>
         <div className='info-data-number '>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -88,7 +92,7 @@ const Stats: NextPage = () => {
            
           </Row>
         </div>
-        {/* <div className='info-data-date'>Date as of: {latestDate}</div> */}
+        
     </div>
     </div>
   );

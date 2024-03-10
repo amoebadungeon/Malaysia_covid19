@@ -62,7 +62,7 @@ const CovidChart = ({ covidData }: any) => {
   }, [covidData]);
 
   return (
-    <div style={{ width: '500px',margin:"auto"}}>
+    <div style={{ width: '550px',paddingTop:"20px" ,paddingLeft:"20px"}}>
         <Line data={chartData} />
     </div>
   );

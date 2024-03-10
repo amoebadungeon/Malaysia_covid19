@@ -5,6 +5,8 @@ import Layout from '../app/layout';
 import Stats from '../component/getAllNumber';
 import ChartData from "../pages/chartDatabyMonth"
 import ChartDatabyStates from "../pages/chartDatabyCities"
+import Header from '@/component/header';
+import CasesTable from '../component/stateTable';
 
 const Home = () => {
   
@@ -22,9 +24,12 @@ const Home = () => {
   return (
     <Layout>
       <div>
+        <Header></Header>
         <Stats />
+        <div className='content-chart'>
         <ChartData></ChartData>
-        {/* <ChartDatabyStates></ChartDatabyStates> */}
+        <CasesTable></CasesTable>
+          </div>
       </div>
     </Layout>
   );
