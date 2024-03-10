@@ -18,7 +18,10 @@ const ChartData = () => {
   return (
     <div>
       <h1>Statistic cases by month</h1>
+      <div className='chart-data container-text'>
       <CovidChart covidData={covidData} />
+      </div>
+    
     </div>
   );
 };

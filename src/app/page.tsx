@@ -24,7 +24,7 @@ const Home = () => {
       <div>
         <Stats />
         <ChartData></ChartData>
-        <ChartDatabyStates></ChartDatabyStates>
+        {/* <ChartDatabyStates></ChartDatabyStates> */}
       </div>
     </Layout>
   );

@@ -25,8 +25,8 @@ const CovidChart = ({ covidData }: any) => {
         label: 'New Cases',
         data: [],
         fill: true,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgb(75, 192, 192)',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        borderColor: 'rgb(53, 162, 235)',
       },
     ],
   });
@@ -53,8 +53,8 @@ const CovidChart = ({ covidData }: any) => {
             label: 'New Cases',
             data,
             fill: true,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgb(75, 192, 192)',
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            borderColor: 'rgb(53, 162, 235)',
           },
         ],
       });
@@ -62,7 +62,7 @@ const CovidChart = ({ covidData }: any) => {
   }, [covidData]);
 
   return (
-    <div style={{ width: '500px', height: '600px' }}>
+    <div style={{ width: '500px',margin:"auto"}}>
         <Line data={chartData} />
     </div>
   );
