@@ -4,7 +4,6 @@ import React from 'react';
 import Layout from '../app/layout';
 import Stats from '../component/getAllNumber';
 import ChartData from "../pages/chartDatabyMonth"
-import ChartDatabyStates from "../pages/chartDatabyCities"
 import Header from '@/component/header';
 import CasesTable from '../component/stateTable';
 
@@ -15,7 +14,7 @@ const Home = () => {
   if (typeof window !== "undefined" && !DEBUG) {
       const methods = ["log", "debug", "warn", "info", "error"];
       for (let i = 0; i < methods.length; i++) {
-          // Using bracket notation and type assertion to bypass TypeScript checks
+      
           (console as any)[methods[i]] = function () {};
       }
   }

@@ -22,8 +22,8 @@ body {
   color: #d8d8d8;
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Use viewport height unit */
-  background-image: url('../../public/img/background.jpg'); /* Adjust image path */
+  min-height: 100vh;
+  background-image: url('../../public/img/background.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(1, 0, 0, 0.9); /* Semi-transparent black overlay */
+  background-color: rgba(1, 0, 0, 0.9);
   z-index: -1;
 }
 

@@ -5,7 +5,7 @@ import moment from 'moment';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
-// Define an interface for the chart data structure
+
 interface ChartData {
   labels: string[];
   datasets: Array<{

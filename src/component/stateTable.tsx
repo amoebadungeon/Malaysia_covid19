@@ -3,7 +3,7 @@ import { Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { reqCovidApi } from '../services/api';
 
-// Define your data types
+
 interface CaseData {
   date: string;
   state: string;
@@ -13,7 +13,7 @@ interface CaseData {
 interface TableData {
   key: string;
   state: string;
-  [key: string]: any; // To allow dynamic year properties
+  [key: string]: any; 
 }
 
 const CasesTable: React.FC = () => {
