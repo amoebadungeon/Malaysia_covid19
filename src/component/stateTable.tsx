@@ -71,7 +71,7 @@ const CasesTable: React.FC = () => {
   }
   return (
     <div className="table-chart" style={{ width: '600px', paddingRight:"30px"}}>
-         <h1>Statistic cases by States</h1>
+         <h1>Statistic Cases By States</h1>
          <Table 
          dataSource={dataSource} 
          columns={columns} 

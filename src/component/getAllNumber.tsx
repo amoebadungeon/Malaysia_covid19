@@ -79,7 +79,7 @@ const Stats: NextPage = () => {
             </Col>
             <Col span={6}>
             <div className='container-text'>
-              <div className='text-dim beauty-border'><img src={"../img/import-cases.png"} alt='covid-import' />
+              <div className='text-dim beauty-border'><img src={"../img/globe.png"} alt='covid-import' />
               Import Cases:{covidData["Import Cases"]?.toLocaleString()} </div>
             </div>
             </Col>

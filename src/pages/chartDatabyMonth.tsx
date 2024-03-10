@@ -17,7 +17,7 @@ const ChartData = () => {
 
   return (
     <div className='chart'>
-      <h1>Statistic cases by month</h1>
+      <h1>Statistic Cases By Month</h1>
       <div className='chart-data container-text'>
       <CovidChart covidData={covidData} />
       </div>

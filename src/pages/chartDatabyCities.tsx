@@ -17,7 +17,7 @@ const ChartDatabyStates = () => {
 
  return(
     <div>
-      <h1> Statistic Cases by States</h1>
+      <h1> Statistic Cases By States</h1>
         {/* <CovidChartByState data={covidData}></CovidChartByState> */}
     </div>
  )
