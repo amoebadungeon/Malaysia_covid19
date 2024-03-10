@@ -61,26 +61,34 @@ const Stats: NextPage = () => {
       <div className='info-data'>
         <div className='info-data-number '>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col span={24} offset = {8}>
-              <div className='text-dim'><img src={"../img/total-cases.png"} alt='covid-total' />
-              Total Cases:{covidData["Total Cases"]?.toLocaleString()}</div>
+            <Col span={6}>
+              <div className='container-text'>
+                <div className='text-dim'><img src={"../img/total-cases.png"} alt='covid-total' />
+                Total Cases:{covidData["Total Cases"]?.toLocaleString()}</div>
+              </div>
             </Col>
-            <Col span={8}>
-            <div className='text-dim beauty-border'><img src={"../img/local-cases.png"} alt='covid-local' />
-            Local Cases:{covidData["Local Cases"]?.toLocaleString()}</div>
+            <Col span={6}>
+            <div className='container-text'>
+              <div className='text-dim beauty-border'><img src={"../img/local-cases.png"} alt='covid-local' />
+              Local Cases:{covidData["Local Cases"]?.toLocaleString()}</div>
+            </div>
             </Col>
-            <Col span={8}>
-            <div className='text-dim beauty-border'><img src={"../img/import-cases.png"} alt='covid-import' />
-            Import Cases:{covidData["Import Cases"]?.toLocaleString()} </div>
+            <Col span={6}>
+            <div className='container-text'>
+              <div className='text-dim beauty-border'><img src={"../img/import-cases.png"} alt='covid-import' />
+              Import Cases:{covidData["Import Cases"]?.toLocaleString()} </div>
+            </div>
             </Col>
-            <Col span={8}>
-            <div className='text-dim beauty-border'><img src={"../img/recovered-cases.png"} alt='covid-recovered' />
-            Recovered Cases: {covidData["Recovered Cases"]?.toLocaleString()} </div>
+            <Col span={6}>
+            <div className='container-text'>
+              <div className='text-dim beauty-border'><img src={"../img/recovered-cases.png"} alt='covid-recovered' />
+              Recovered Cases: {covidData["Recovered Cases"]?.toLocaleString()} </div>
+            </div>
             </Col>
            
           </Row>
         </div>
-        <div className='info-data-date'>Date as of: {latestDate}</div>
+        {/* <div className='info-data-date'>Date as of: {latestDate}</div> */}
     </div>
     </div>
   );
