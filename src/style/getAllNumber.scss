@@ -52,6 +52,20 @@
             margin: auto;
             margin-bottom: 0.5em;
         }
+        small{
+            position: absolute;
+            top: 10%;
+            left: 78%;
+            border-radius: .25rem;
+            background-color: rgb(74 222 128/0.2);
+            --tw-text-opacity: 1;
+            color: rgb(34 197 94/var(--tw-text-opacity));
+            width: 3vw;
+            padding-left: 3px;
+        }
+        .text-number{
+            left: 8px;
+        }
         
     }
    

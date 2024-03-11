@@ -4,9 +4,13 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { reqCovidApi } from '../services/api';
 import { Col, Divider, Row } from 'antd';
+
 const Stats: NextPage = () => {
   const [queryData, setQueryData] = useState(null);
   const [latestDate, setLatestDate] = useState(null)
+  const [NewCase, setNewCase] = useState(null)
+  const [importCase, setimportCase] = useState(null)
+  const [RecoCase, setRecoCase] = useState(null)
   const [covidData, setCovidData] = useState({
     "Total Cases" : 0,
     "Local Cases" : 0,
@@ -52,6 +56,9 @@ const Stats: NextPage = () => {
   const getDates = (data: any) =>{
     const latestDate = data[data.length - 1]
     setLatestDate(latestDate.date);
+    setNewCase(latestDate.cases_new);
+    setimportCase(latestDate.cases_import);
+    setRecoCase(latestDate.cases_recovered);
   }
 
   return (
@@ -68,25 +75,28 @@ const Stats: NextPage = () => {
             <Col span={6}>
               <div className='container-text'>
                 <div className='text-dim'><img src={"../img/total-cases.png"} alt='covid-total' />
-                Total Cases:{covidData["Total Cases"]?.toLocaleString()}</div>
+                <div className='text-number'>Total Cases:{covidData["Total Cases"]?.toLocaleString()}</div></div>
               </div>
             </Col>
             <Col span={6}>
             <div className='container-text'>
               <div className='text-dim beauty-border'><img src={"../img/local-cases.png"} alt='covid-local' />
-              Local Cases:{covidData["Local Cases"]?.toLocaleString()}</div>
+              <small className="inline-block rounded px-1.5 bg-red-400 text-red-500 bg-opacity-20">+ {NewCase}</small>
+              <div className='text-number'>Local Cases:{covidData["Local Cases"]?.toLocaleString()}</div></div>
             </div>
             </Col>
             <Col span={6}>
             <div className='container-text'>
               <div className='text-dim beauty-border'><img src={"../img/globe.png"} alt='covid-import' />
-              Import Cases:{covidData["Import Cases"]?.toLocaleString()} </div>
+              <small className="inline-block rounded bg-opacity-20 px-1.5 bg-green-400 text-green-500">+ {importCase}</small>
+              <div className='text-number'>Import Cases:{covidData["Import Cases"]?.toLocaleString()}</div> </div>
             </div>
             </Col>
             <Col span={6}>
             <div className='container-text'>
               <div className='text-dim beauty-border'><img src={"../img/recovered-cases.png"} alt='covid-recovered' />
-              Recovered Cases: {covidData["Recovered Cases"]?.toLocaleString()} </div>
+              <small className="inline-block rounded bg-opacity-20 px-1.5 bg-green-400 text-green-500">+ {RecoCase}</small>
+              <div className='text-number'>Recovered Cases: {covidData["Recovered Cases"]?.toLocaleString()}</div> </div>
             </div>
             </Col>
            
