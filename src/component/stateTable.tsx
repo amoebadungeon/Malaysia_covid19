@@ -70,7 +70,7 @@ const CasesTable: React.FC = () => {
     setDataSource(newDataSource);
   }
   return (
-    <div className="table-chart" style={{ width: '600px', paddingRight:"30px"}}>
+    <div className="table-chart" style={{ width: '650px', paddingRight:"30px"}}>
          <h1>Statistic Cases By States</h1>
          <Table 
          dataSource={dataSource} 
